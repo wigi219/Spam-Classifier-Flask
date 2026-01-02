@@ -7,7 +7,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.svm import SVC
 from sklearn.metrics import classification_report
 # load dataset
-df = pd.read_csv("C:\Users\LABKOM\Videos\jumat pagi\dataset\spam.csv")
+df = pd.read_csv("dataset\spam.csv")
 X = df["Message"]
 y = df["Category"]
 # split dataset
@@ -43,4 +43,5 @@ print(classification_report(y_test, y_pred))
 # simpan ke svm_model.pkl
 with open("svm_model.pkl", "wb") as f:
     pickle.dump(pipeline, f)
+
 print("svm_model.pkl berhasil dibuat")
